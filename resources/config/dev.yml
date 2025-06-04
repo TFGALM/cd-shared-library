@@ -1,0 +1,28 @@
+projectName: "devops-cd"
+urls:
+  sonar: 'https://sonarqube.alopezpa.homelab'
+  trivy: 'https://forgejo.alopezpa.homelab/security/analysis-report.git'
+  forgejo: 'https://forgejo.alopezpa.homelab'
+  forgejoApiRepos: '/api/v1/repos/'
+  harbor: 'https://harbor.alopezpa.homelab'
+  harborApiProjects : '/api/v2.0/projects/'
+  argocd: 'https://argocd.alopezpa.homelab'
+  argoApiProjects: '/api/v1/projects'
+  argoApiApplications: '/api/v1/applications'
+services:
+  sonar: 'http://sonarqube-sonarqube.sonarqube.svc:9000'
+  nexus: 'http://nexus-nexus-repository-manager.nexus.svc:8081'
+  harbor: 'harbor-core.harbor.svc'
+
+git:
+  credentials:
+    id: 'forgejo-access-token'
+argocd:
+  credentials:
+    id: 'argocd-forgejo-bot-token'
+forgejo:
+  credentials:
+    id: 'forgejo-api-token'
+
+repoConfFile: "/config/dev.yml"
+repository: "FORGEJO"

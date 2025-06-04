@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cd-runner
+spec:
+  containers:
+    - name: jnlp
+      env:
+        - name: GIT_SSL_NO_VERIFY
+          value: "true"
+    - name: builder
+      image: harbor.alopezpa.homelab/system/cd-base:v1.0.0-c02
+      imagePullPolicy: IfNotPresent
+      command:
+        - sleep
+      args:
+        - 25m
+      tty: true

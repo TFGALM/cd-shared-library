@@ -1,0 +1,10 @@
+bb-cd-deploy-app:
+  appName: {{appName}}
+  namespace: {{nameSpace}}
+
+  image:
+    repository: {{imgName}}
+    tag: {{imgTag}}
+    pullPolicy: IfNotPresent
+
+  replicaCount: 1

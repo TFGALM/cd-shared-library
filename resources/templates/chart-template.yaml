@@ -1,0 +1,9 @@
+apiVersion: v2
+name: {{appName}}
+version: {{appVersion}}
+description: A Helm chart for deploying {{appName}} in K8s
+
+dependencies:
+  - name: bb-cd-deploy-app
+    version: "1.0.0"
+    repository: "https://nexus.alopezpa.homelab/repository/helm-releases/"
